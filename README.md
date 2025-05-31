@@ -1,4 +1,4 @@
 # Archive-Website
 Website that we created for people that will become public.
 
-reason why it has `-main` is because I downloaded from the website from my GitHub repo but will change since I won't archive website to my GitHub no more but here now.
+reason why it has `-main` is because I downloaded the website from my GitHub repo but will change since I won't archive website to my GitHub no more but here now.
