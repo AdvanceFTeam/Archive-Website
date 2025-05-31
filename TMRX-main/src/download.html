@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMRX - Download</title>
+    <link rel="icon" type="image/png" href="Cosmic.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="download.css" />
+  </head>
+
+  <body>
+    <div class="blob"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="../Cubix.png" alt="Logo" class="nav-logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/URjJ4B7wDS">Discord</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="download-section">
+      <div class="container">
+        <h1>Download</h1>
+        <p>
+          Get the latest version of Cubix and start using the best mobile cheats
+          for Roblox.
+        </p>
+        <div class="mt-4 position-relative d-inline-block">
+          <div class="dropdown-2">
+            <button class="dropbtn">Select</button>
+            <div class="dropdown">
+              <a href="#" onclick="selplatform('iOS')">iOS</a>
+              <a href="#" onclick="selplatform('Android')">Android</a>
+            </div>
+          </div>
+        </div>
+        <div id="select-1" class="select-1"></div>
+      </div>
+    </section>
+
+    <footer class="footer text-center">
+      <div class="container">
+        <p>Made by TMRX team | Website design by AdvanceFalling Team</p>
+      </div>
+    </footer>
+
+    <div class="social-icons">
+      <a href="https://discord.gg/URjJ4B7wDS" class="social-icon">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div id="notification" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modal-message"></p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const downloads = {
+        iOS: "https://www.mediafire.com/file/osayyeqsgpz8w9y/Cubix1.ipa/file",
+        Android:
+          "https://www.mediafire.com/file/dopovolctxgwxxq/Cubix+v2.635+[KEYLESS].apk/file",
+      };
+
+      function selplatform(platform) {
+        var info = document.getElementById("select-1");
+
+        if (platform === "iOS") {
+          if (downloads.iOS) {
+            info.innerHTML =
+              "<div><strong>Device: iOS</strong></div>" +
+              "<a href='" +
+              downloads.iOS +
+              "' download class='btn btn-1'>Download iOS Version</a>";
+          } else {
+            notification("No iOS download available.");
+          }
+        } else if (platform === "Android") {
+          if (downloads.Android) {
+            info.innerHTML =
+              "<div><strong>Device: Android</strong></div>" +
+              "<a href='" +
+              downloads.Android +
+              "' download class='btn btn-1'>Download Android Version</a>";
+          } else {
+            notification("No Android download available.");
+          }
+        }
+        info.classList.add("fade-in");
+      }
+
+      function notification(message) {
+        var modal = document.getElementById("notification");
+        var modalMessage = document.getElementById("modal-message");
+        modalMessage.textContent = message;
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("notification");
+        modal.style.display = "none";
+      }
+
+      window.onscroll = function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      };
+
+      window.onclick = function (event) {
+        var modal = document.getElementById("notification");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
