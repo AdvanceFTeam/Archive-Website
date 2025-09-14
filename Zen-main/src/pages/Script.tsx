@@ -87,7 +87,6 @@ const ScriptPage = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          {/* Script Card */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -126,7 +125,6 @@ const ScriptPage = () => {
               {codeString}
             </SyntaxHighlighter>
 
-            {/* Changelog */}
             <div className="mt-6 pt-6 border-t border-white/10">
               <h3 className="text-lg font-semibold mb-4">Changelog</h3>
               <div className="space-y-6">
@@ -145,7 +143,6 @@ const ScriptPage = () => {
             </div>
           </motion.div>
 
-          {/* Discord Servers */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -183,7 +180,6 @@ const ScriptPage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Supported Games */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -205,7 +201,6 @@ const ScriptPage = () => {
             </div>
           </motion.div>
 
-          {/* Features */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
